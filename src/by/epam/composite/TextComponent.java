@@ -1,6 +1,5 @@
 package by.epam.composite;
 
-
 import java.util.List;
 
 public interface TextComponent {
@@ -11,4 +10,6 @@ public interface TextComponent {
     TextComponent get(int index);
 
     List<TextComponent> getAll();
+
+    TextType getTextType();
 }

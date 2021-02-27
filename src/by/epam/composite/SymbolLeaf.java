@@ -11,12 +11,10 @@ public class SymbolLeaf implements TextComponent{
 
     @Override
     public void add(TextComponent textComponent) {
-
     }
 
     @Override
     public void remove(TextComponent textComponent) {
-
     }
 
     @Override
@@ -27,6 +25,11 @@ public class SymbolLeaf implements TextComponent{
     @Override
     public List<TextComponent> getAll() {
         return null;
+    }
+
+    @Override
+    public TextType getTextType() {
+        return TextType.SYMBOL;
     }
 
     @Override

@@ -5,10 +5,23 @@ import java.util.Collections;
 import java.util.List;
 
 public class TextComposite implements TextComponent{
-    private final List<TextComponent> textComponents;
+    private List<TextComponent> textComponents;
+    private TextType textType;
+    private static final String WORD_DELIMITER = " ";
+    private static final String PARAGRAPH_DELIMITER = "\n\t";
 
-    public TextComposite(){
+    public TextComposite(TextType textType){
         textComponents = new ArrayList<>();
+        this.textType = textType;
+    }
+
+    public void setTextType(TextType textType) {
+        this.textType = textType;
+    }
+
+    @Override
+    public TextType getTextType() {
+        return textType;
     }
 
     @Override
@@ -36,6 +49,10 @@ public class TextComposite implements TextComponent{
         StringBuilder sb = new StringBuilder();
         for (TextComponent t : textComponents) {
             sb.append(t.toString());
+            switch (t.getTextType()) {
+                case WORD -> sb.append(WORD_DELIMITER);
+                case PARAGRAPH -> sb.append(PARAGRAPH_DELIMITER);
+            }
         }
         return sb.toString();
     }
