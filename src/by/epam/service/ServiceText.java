@@ -5,7 +5,6 @@ import by.epam.composite.TextComponent;
 import by.epam.composite.TextComposite;
 import by.epam.composite.TextType;
 import by.epam.exception.CustomException;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
