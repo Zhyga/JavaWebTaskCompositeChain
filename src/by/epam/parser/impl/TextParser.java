@@ -7,7 +7,7 @@ import by.epam.parser.BaseParser;
 
 public class TextParser implements BaseParser {
     private static final TextParser INSTANCE = new TextParser();
-    private static final String TEXT_DELIMITER = "\n\\s+";
+    private static final String TEXT_DELIMITER = "\n\\s*";
     private ParagraphParser paragraphParser = ParagraphParser.getInstance();
 
     private TextParser(){}

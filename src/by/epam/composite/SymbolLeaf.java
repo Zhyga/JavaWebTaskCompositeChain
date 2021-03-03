@@ -11,20 +11,22 @@ public class SymbolLeaf implements TextComponent{
 
     @Override
     public void add(TextComponent textComponent) {
+        throw new UnsupportedOperationException("Method 'add' is not supported for this class");
     }
 
     @Override
     public void remove(TextComponent textComponent) {
+        throw new UnsupportedOperationException("Method 'remove' is not supported for this class");
     }
 
     @Override
     public TextComponent get(int index) {
-        return null;
+        throw new UnsupportedOperationException("Method 'get' is not supported for this class");
     }
 
     @Override
     public List<TextComponent> getAll() {
-        return null;
+        throw new UnsupportedOperationException("Method 'getAll' is not supported for this class");
     }
 
     @Override

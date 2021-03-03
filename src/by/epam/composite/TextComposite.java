@@ -56,4 +56,25 @@ public class TextComposite implements TextComponent{
         }
         return sb.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        TextComposite that = (TextComposite) o;
+        return textComponents == that.textComponents &&
+                textType == that.textType;
+    }
+
+    @Override
+    public int hashCode(){
+        int result = 11;
+        result += result * 3 + (textComponents.isEmpty() ? 0 : 1);
+        result += result * 3 + textType.hashCode();
+        return result;
+    }
 }
